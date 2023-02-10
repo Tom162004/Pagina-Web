@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Segunda sesion de clase</title>
+</head>
+<body>
+	<h1>1. Botones con acciones y mensajes</h1>
+	<button>Boton basico</button><br><br>
+
+	<button onclick="accion_1()" id="Bt1"> Boton 1</button> <br><br>
+
+	<button onclick="accion_2()" id="Bt2"> Boton 2</button> <br><br>
+
+	<button onclick="accion_3()" id="Bt3"> Boton 3</button> <br><br><br>
+
+
+	<h1>2. Despliegue de datos</h1>
+
+	<p>Hola, a continuación solicitaremos algunos datos personales, esperamos nos puedas colaborar con tu información. ¡Gracias!</p> <br>
+
+	Primer nombre: <input type="text" name="Recibir texto 1" id="Tx_1"> <br> <br> <br>	
+
+	Segundo nombre: <input type="text" name="Recibir texto 2" id="Tx_2"> <br> <br>
+
+	<p> Primer apellido: <input type="text" name="Recibir texto 3" id="Tx_3"></p> <br>
+
+	<p> Segundo apellido: <input type="text" name="Recibir texto 4" id="Tx_4"></p> <br>
+
+	<button onclick="accion_4()" id="Bt4">Concatenar</button> <br><br>
+
+	Nombres: &nbsp;<output id="Out1"></output> y Apellidos: &nbsp;<output id="Out2"></output>
+
+	<style type="text/css">
+		
+		body{
+			background-image: url(Galaxia.jpg);
+			background-repeat: round;
+			color: rgb(255, 0, 0);
+		}
+
+		h1{color: rgba(0, 0, 0, 1.0);}
+
+	#Out1{color: rgba(19, 65, 95, 1.0);}
+	#Out2{color: rgba(19, 65, 95, 1.0);}
+
+	</style>
+
+	<script type="text/javascript">
+
+
+		function accion_1() 
+		{
+			alert("Alerta boton 1");
+		}
+
+		function accion_2() {
+			comfirm("Confirmacion de boton 2");
+		}
+
+		function accion_3() {
+			alert("Alerta boton 3");
+		}
+
+		function accion_4() 
+		{	
+			var nombreCompleto = document.getElementById("Tx_1").value+" "+
+								document.getElementById("Tx_2").value+" "+
+								document.getElementById("Tx_3").value+" "+
+								document.getElementById("Tx_4").value
+
+			var nombres = document.getElementById("Tx_1").value+" "+document.getElementById("Tx_2").value
+
+			var apellidos = document.getElementById("Tx_3").value+" "+document.getElementById("Tx_4").value
+
+			alert(nombreCompleto)
+
+			document.getElementById("Out1").innerHTML= nombres
+			document.getElementById("Out2").innerHTML= apellidos
+		}
+
+		console.log("By Bryam Diaz :D");
+		alert("By Bryam Diaz :D");
+
+
+	</script>	
+
+</body>
+</html>
